@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <style>
+        .message-right {
+            text-align: right;
+        }
+        .message-left {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Chat with yourself</h1>
+    <div class="main">
+        <div class="name">
+            <span><i class="fas fa-user"></i></span>
+            <input type="text" id="name-input" class="name-input" value="anonymous" maxlength="20"/>
+        </div>
+
+        <ul class="message-container" id="message-container"></ul>
+
+        <form class="message-form" id="message-form" action="" onsubmit="return false;">
+            <input type="text" name="message" id="message-input" class="message-input"/>
+            <div class="v-divider"></div>
+            <button type="submit" class="send-button">
+                Send <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+
+    <h3 class="clients-total" id="clients-total">Total Clients: 2</h3>
+
+    <script src="socket.io\socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
